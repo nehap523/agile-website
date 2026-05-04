@@ -1,0 +1,114 @@
+{
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the main purpose of HTML in web development?",
+        "options": [
+          "To style the page",
+          "To define the structure and content of the page",
+          "To add database support",
+          "To handle server security"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q2",
+        "question": "Which HTML element is most appropriate for a group of navigation links?",
+        "options": [
+          "<section>",
+          "<article>",
+          "<nav>",
+          "<aside>"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "q3",
+        "question": "What is the main purpose of CSS?",
+        "options": [
+          "To define page structure",
+          "To style and lay out web pages",
+          "To store quiz attempts",
+          "To send HTTP requests"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q4",
+        "question": "Which CSS property is part of the box model?",
+        "options": [
+          "padding",
+          "console",
+          "fetch",
+          "onclick"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "q5",
+        "question": "What does JavaScript mainly add to a webpage?",
+        "options": [
+          "Semantic structure only",
+          "Static styling only",
+          "Behaviour and interactivity",
+          "File compression"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "q6",
+        "question": "What is the DOM?",
+        "options": [
+          "A database object manager",
+          "A programming language",
+          "A browser model of the HTML document",
+          "A CSS layout framework"
+        ],
+        "answer": 2
+      },
+      {
+        "id": "q7",
+        "question": "Which JavaScript method is commonly used to load data from a local JSON file or API?",
+        "options": [
+          "margin()",
+          "fetch()",
+          "padding()",
+          "display()"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q8",
+        "question": "Why is semantic HTML considered good practice?",
+        "options": [
+          "It makes all pages look the same",
+          "It improves meaning, readability, and accessibility",
+          "It replaces the need for CSS",
+          "It prevents JavaScript from running"
+        ],
+        "answer": 1
+      },
+      {
+        "id": "q9",
+        "question": "Which browser feature lets a site save quiz attempts locally between page loads?",
+        "options": [
+          "localStorage",
+          "alert",
+          "console.log",
+          "addEventListener"
+        ],
+        "answer": 0
+      },
+      {
+        "id": "q10",
+        "question": "What should happen before a quiz is submitted if some questions are unanswered?",
+        "options": [
+          "The score should still be calculated",
+          "The browser should close the page",
+          "Submission should be blocked and unanswered questions highlighted",
+          "The reward API should be called"
+        ],
+        "answer": 2
+      }
+    ]
+  }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agile Web Foundations | AI Reflection Log</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reflection.css">
+</head>
+<body>
+  <!-- Shared site navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Agile Web Foundations</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Tutorial</a></li>
+          <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Reflection page hero section -->
+  <header class="reflection-hero">
+    <div class="container">
+      <span class="hero-badge">Page 3 • AI Reflection Log</span>
+      <h1>Critical reflection on how AI was used during this project</h1>
+      <p>
+        This page documents how AI tools were used during development, the prompts I used, what the AI produced, what I changed, and what limitations, reliability concerns, risks, and ethical issues became clear during the process.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main reflection content -->
+  <main class="reflection-main py-5">
+    <div class="container">
+      <!-- Introduction: how AI was used overall -->
+      
+
+      <!-- Use Case 1: planning and idea validation -->
+      <section class="reflection-card">
+        <div class="section-heading">
+          <span class="section-tag">Use Case 1</span>
+          <h2>Using AI for initial planning and idea validation</h2>
+        </div>
+
+        <div class="prompt-box">
+          <h3>Example prompt</h3>
+          <p>
+            “I have a four-page web project with a tutorial page, quiz page, AI reflection page, and CV page. Suggest a page structure that fits the assignment brief.”
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="mini-card">
+            <h3>How it helped</h3>
+            <p>
+              The AI suggested a four-page structure, a consistent navigation flow, and a modular file organisation using separate HTML, CSS, JavaScript, and data files. This helped me translate the assignment brief into a practical implementation plan more quickly.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>My contribution</h3>
+            <p>
+              I compared those suggestions with the assignment brief and rubric, simplified parts that were too broad, and decided which ideas stayed within the lecture scope. The final structure, design decisions, and implementation details were all chosen and written by me.
+            </p>
+          </div>
+        </div>
+
+        <div class="analysis-box">
+          <h3>Critical evaluation</h3>
+          <p>
+            AI was helpful for planning, but its suggestions were high-level and sometimes too confident. It could propose a good-looking structure without guaranteeing that every feature matched the rubric exactly. This meant I still had to interpret the requirements myself and decide what was realistic, relevant, and technically appropriate.
+          </p>
+        </div>
+      </section>
+
+      <!-- Use Case 2: debugging and clarification -->
+      <section class="reflection-card">
+        <div class="section-heading">
+          <span class="section-tag">Use Case 2</span>
+          <h2>Using AI for debugging and clarification</h2>
+        </div>
+
+        <div class="prompt-box">
+          <h3>Example prompt</h3>
+          <p>
+            “My quiz page is loading but the questions are not appearing correctly from the JSON file, and some navigation or file path issues are breaking the page. What should I check first?”
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="mini-card">
+            <h3>How it helped</h3>
+            <p>
+              AI suggested likely causes such as incorrect relative file paths, JSON loading problems, and JavaScript logic mistakes. It also broke the debugging process into smaller steps, which made the issues easier to investigate.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>My contribution</h3>
+            <p>
+              I tested each suggested fix in the browser, checked the console, corrected the file structure myself, and confirmed that the final solution still matched lecture topics such as DOM manipulation, event handling, AJAX, and local storage.
+            </p>
+          </div>
+        </div>
+
+        <div class="analysis-box">
+          <h3>Critical evaluation</h3>
+          <p>
+            This use of AI highlighted a reliability issue: AI could produce plausible debugging advice that was not always the real cause of the problem. I still had to verify each suggestion by testing it, because a confident answer from AI did not guarantee correctness. In that sense, AI supported debugging, but it did not replace the need for understanding the code myself.
+          </p>
+        </div>
+      </section>
+
+      <!-- Use Case 3: validation against the rubric and concept understanding -->
+      <section class="reflection-card">
+        <div class="section-heading">
+          <span class="section-tag">Use Case 3</span>
+          <h2>Using AI for validation and concept understanding</h2>
+        </div>
+      
+        <div class="prompt-box">
+          <h3>Example prompt</h3>
+          <p>
+            “Compare my current implementation with the assignment requirements and rubric. Tell me what is still missing, especially for AJAX, local storage, quiz validation, and the AI reflection criteria.”
+          </p>
+        </div>
+      
+        <div class="two-col">
+          <div class="mini-card">
+            <h3>How it helped</h3>
+            <p>
+              AI helped identify possible gaps between my implementation and the rubric, especially around quiz validation, reward fetching, local storage, and reflection requirements. It also explained some concepts in simpler language when I needed a quicker clarification before continuing with implementation.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>My contribution</h3>
+            <p>
+              I reviewed those suggestions critically, compared them with the actual rubric, and then decided which changes were necessary. I only applied changes after I understood why they were needed and how they worked in my own code.
+            </p>
+          </div>
+        </div>
+      
+        <div class="analysis-box">
+          <h3>Critical evaluation</h3>
+          <p>
+            AI was useful for validation, but it could still miss important details or overstate how complete a feature was. This meant I could not rely on it as a final judge of correctness. I still needed to test features, read the brief carefully, and confirm that the implementation actually worked as required.
+          </p>
+        </div>
+      </section>
+
+      <!-- Specific example of incorrect AI output and how it was detected -->
+      <section class="reflection-card">
+        <div class="section-heading">
+          <span class="section-tag">Critical Review</span>
+          <h2>One case where AI output was incorrect and how I detected it</h2>
+        </div>
+
+        <div class="prompt-box">
+          <h3>Specific example</h3>
+          <p>
+            In one case, AI suggested a page structure and styling approach that initially placed too much CSS directly inside the HTML file instead of keeping the project cleanly modular with separate CSS and JavaScript files.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div class="mini-card">
+            <h3>What was wrong</h3>
+            <p>
+              The suggestion looked functional at first, but it was not fully aligned with the assignment expectation that the final submission should contain clearly separated HTML, CSS, and JavaScript files. It also made the page harder to maintain and less consistent with good web development practice.
+            </p>
+          </div>
+
+          <div class="mini-card">
+            <h3>How I detected it</h3>
+            <p>
+              I detected the issue by comparing the generated structure with the assignment brief, checking the project folder organisation, and reviewing whether the solution reflected the separation of concerns taught in lectures. I then moved the page-specific styles and logic into dedicated CSS and JavaScript files.
+            </p>
+          </div>
+        </div>
+
+        <div class="analysis-box">
+          <h3>Why this mattered</h3>
+          <p>
+            This example showed that AI output can appear correct because it works visually, even when it is not the best solution academically or structurally. That made it important to judge AI output against both technical correctness and assignment expectations.
+          </p>
+        </div>
+      </section>
+
+      <!-- Evaluation of AI reliability, risks, and ethics -->
+      <section class="reflection-card">
+        <div class="section-heading">
+          <span class="section-tag">Evaluation</span>
+          <h2>Reliability, risks, and ethical considerations</h2>
+        </div>
+
+        <div class="analysis-box">
+          <h3>Reliability</h3>
+          <p>
+            AI tools were useful for producing quick suggestions, but they were not fully reliable. Some responses were accurate, while others were incomplete, too general, or overly confident. I therefore treated AI output as a starting point rather than a final answer.
+          </p>
+        </div>
+
+        <div class="analysis-box">
+          <h3>Risks</h3>
+          <p>
+            One major risk is over-reliance. If I had copied AI output without understanding it, I would have struggled to debug it, explain it in the demo, or adapt it to the rubric. Another risk is that AI can encourage false confidence by making an incomplete solution sound correct.
+          </p>
+        </div>
+
+        <div class="analysis-box">
+          <h3>Ethical considerations</h3>
+          <p>
+            Ethical use of AI in a coding project requires transparency, academic honesty, and independent understanding. AI can support learning, but it should not replace the student’s own thinking or be presented as original work without acknowledgement. In this project, I used AI as a support tool and ensured that final decisions, coding, corrections, and testing remained my responsibility.
+          </p>
+        </div>
+      </section>
+
+      <!-- Navigation to the other project pages -->
+      <section class="next-page-card">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-md-8">
+              <h2>Explore the other pages</h2>
+              <p class="mb-0">
+                Return to the tutorial, revisit the quiz, or open the CV page to view the full project.
+              </p>
+            </div>
+            <div class="col-md-4 text-md-end d-flex flex-column gap-2 align-items-md-end">
+              <a href="index.html" class="btn btn-soft">Tutorial Page</a>
+              <a href="quiz.html" class="btn btn-soft">Quiz Page</a>
+              <a href="cv.html" class="btn btn-brand">CV Page</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Page footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">Agile Web Foundations • AI Reflection Log</p>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

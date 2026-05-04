@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agile Web Foundations | Quiz</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+    <!-- Shared site navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Agile Web Foundations</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Tutorial</a></li>
+          <li class="nav-item"><a class="nav-link" href="reflection.html">AI Reflection</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Quiz page hero section -->
+  <header class="quiz-hero">
+    <div class="container">
+      <span class="hero-badge">Quiz Page</span>
+      <h1>Test your knowledge of HTML, CSS, and JavaScript</h1>
+      <p>
+        Questions are loaded dynamically from a local JSON file, shown in random order, scored automatically, and saved in local storage so you can track your progress.
+      </p>
+    </div>
+  </header>
+
+  <!-- Quiz instructions and pass threshold -->
+  <main class="quiz-main" id="quizSection">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+          <section class="info-card h-100">
+            <h2>How this quiz works</h2>
+            <p>
+              There are 10 questions. You need <strong>50%</strong> or more to pass.
+              Once you start answering, the browser will warn you if you try to leave before submitting.
+            </p>
+            <div class="status-pill" id="quizStatusPill">Status: Not started</div>
+          </section>
+        </div>
+
+        <!-- Dynamic quiz question container populated from local JSON -->
+        <div class="col-lg-4">
+          <section class="info-card h-100">
+            <h2>Checklist</h2>
+            <ul class="mb-0">
+              <li>Loaded from local JSON</li>
+              <li>Randomised order</li>
+              <li>Dynamic rendering</li>
+              <li>Public API reward on pass</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+      <section class="quiz-card">
+        <div class="quiz-header">
+          <div>
+            <h2>Interactive Quiz</h2>
+            <p class="small-note">Questions are rendered entirely with JavaScript.</p>
+          </div>
+          <div class="progress-side">
+            <div class="small-note mb-2">
+              <span id="answeredCount">0</span> / <span id="totalCount">0</span> answered
+            </div>
+            <div class="progress">
+              <div id="progressBar" class="progress-bar" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="loadingNote" class="loading-note">Loading questions...</div>
+        <div id="errorBox" class="error-box"></div>
+
+        <form id="quizForm" novalidate></form>
+
+        <div class="quiz-actions">
+          <div class="small-note">Pass mark: 50%</div>
+          <div class="d-flex gap-2 flex-wrap">
+            <button type="button" id="submitQuizBtn" class="btn btn-brand">Submit Quiz</button>
+            <button type="button" id="resetQuizBtn" class="btn btn-soft">Reset Answers</button>
+          </div>
+        </div>
+      </section>
+<!-- Quiz result display: score, percentage, and pass/fail -->
+      <section id="resultCard" class="result-card mt-4">
+        <h2>Your Result</h2>
+        <div class="result-grid">
+          <div class="stat-box">
+            <div class="stat-label">Score</div>
+            <div class="stat-value" id="scoreValue">0/0</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Percentage</div>
+            <div class="stat-value" id="percentageValue">0%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Threshold</div>
+            <div class="stat-value">50%</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Result</div>
+            <div class="stat-value" id="passFailValue">-</div>
+          </div>
+        </div>
+
+        <div id="passMessage" class="pass-message"></div>
+<!-- Reward content loaded from a public API after a passing result -->
+        <div id="rewardBox" class="reward-box">
+          <span class="reward-badge">Reward unlocked</span>
+          <h3>Congratulations on passing!</h3>
+          <p id="rewardText">Fetching your reward...</p>
+        </div>
+      </section>
+<!-- Attempt history stored in local storage -->
+      <section class="history-card mt-4">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+          <div>
+            <h2 class="mb-1">Attempt History</h2>
+            <p class="mb-0">Your previous quiz attempts are stored locally.</p>
+          </div>
+          <button type="button" id="clearHistoryBtn" class="btn btn-soft">Clear History</button>
+        </div>
+        <div id="attemptList" class="attempt-list"></div>
+        <div id="historyEmptyState" class="empty-state">No quiz attempts saved yet.</div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">
+        Agile Web Foundations • Quiz page with AJAX, validation, reward API, and local storage
+      </p>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
