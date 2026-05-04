@@ -5,6 +5,10 @@ This project is a multi-page interactive web application developed as part of th
 The application demonstrates core front-end development concepts using **HTML, CSS, and JavaScript**, with dynamic behaviour implemented using AJAX and browser storage.
 
 ---
+## 🌐 Live Demo
+https://nehap523.github.io/agile-website/
+
+---
 
 ## 📌 Project Overview
 
