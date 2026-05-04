@@ -85,3 +85,44 @@ The application maintains a **consistent design and navigation structure** acros
 ---
 
 ## 📂 Project Structure
+project-root/
+│
+├── index.html
+├── quiz.html
+├── reflection.html
+├── cv.html
+│
+├── css/
+│ ├── style.css
+│ ├── tutorial.css
+│ ├── quiz.css
+│ ├── reflection.css
+│ └── cv.css
+│
+├── js/
+│ ├── main.js
+│ ├── tutorial.js
+│ ├── quiz.js
+│ └── cv.js
+│
+├── data/
+│ └── questions.json
+│
+├── images/
+│ └── profile-placeholder.jpg
+
+
+---
+
+## ▶️ How to Run the Project
+
+⚠️ **Important:** The quiz uses `fetch()` to load JSON, so it must be run using a local server.
+
+### Option 1: Python Server
+
+```bash
+python3 -m http.server 8000
+
+Open in browser:
+
+http://localhost:8000
